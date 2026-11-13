@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BURE NICHOLAS BOHM SCHOOL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>BURE NICHOLAS BOHM SCHOOL</h1>
+    <p>Student Registration System</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#registration">Registration</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="hero">
+    <h2>Welcome to Bure Nicholas Bohm School</h2>
+    <p>Quality Education for a Bright Future</p>
+    <a href="#registration" class="btn">Register Now</a>
+</section>
+
+<section id="about" class="about">
+    <h2>About Our School</h2>
+    <p>
+        Bure Nicholas Bohm School is committed to providing
+        quality education and building a bright future for students.
+    </p>
+</section>
+
+<section id="registration" class="registration">
+
+<h2>Student Registration Form</h2>
+
+<form name="student-registration"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      enctype="multipart/form-data">
+
+    <input type="hidden" name="form-name"
+           value="student-registration">
+
+    <p hidden>
+        <label>Do not fill:
+            <input name="bot-field">
+        </label>
+    </p>
+
+    <h3>Student Information</h3>
+
+    <label>Student Full Name</label>
+    <input type="text" name="student-name" required>
+
+    <label>Student Photo</label>
+    <input type="file" name="student-photo"
+           accept="image/*" required>
+
+    <label>Gender</label>
+    <select name="gender" required>
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+
+    <label>Date of Birth</label>
+    <input type="date" name="date-of-birth" required>
+
+    <label>Age</label>
+    <input type="number" name="age" min="1" max="100" required>
+
+    <label>National ID (NID)</label>
+    <input type="text" name="nid"
+           placeholder="Enter National ID" required>
+
+    <h3>Parent / Family Information</h3>
+
+    <label>Parent's Full Name</label>
+    <input type="text" name="parent-name" required>
+
+    <label>Parent Photo</label>
+    <input type="file" name="parent-photo"
+           accept="image/*" required>
+
+    <label>Parent Phone Number</label>
+    <input type="tel" name="parent-phone" required>
+
+    <label>Address</label>
+    <input type="text" name="address" required>
+
+    <h3>Previous Education Information</h3>
+
+    <label>Previous School Name</label>
+    <input type="text" name="previous-school">
+
+    <label>Previous Education Status</label>
+    <select name="previous-status" required>
+        <option value="">Select Status</option>
+        <option value="Failed">Failed (Kufee)</option>
+        <option value="Returned">Interrupted and Returned</option>
+        <option value="Transferred">Transferred</option>
+    </select>
+
+    <label>Grade Previously Passed</label>
+    <select name="previous-grade" required>
+        <option value="">Select Grade</option>
+        <option value="Grade 9">9th</option>
+        <option value="Grade 10">10th</option>
+        <option value="Grade 11">11th</option>
+        <option value="Grade 12">12th</option>
+    </select>
+
+    <label>Previous Average Result</label>
+    <input type="number" name="previous-average"
+           min="0" max="100" step="0.01"
+           placeholder="Enter Average">
+
+    <h3>Current Registration</h3>
+
+    <label>Grade / Class</label>
+    <select name="grade" required>
+        <option value="">Select Grade</option>
+        <option>Grade 9</option>
+        <option>Grade 10</option>
+        <option>Grade 11</option>
+        <option>Grade 12</option>
+    </select>
+
+    <label>Section</label>
+    <select name="section" required>
+        <option value="">Select Section</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+        <option>F</option>
+        <option>G</option>
+    </select>
+
+    <h3>Signatures</h3>
+
+    <label>Student Signature</label>
+    <input type="text" name="student-signature"
+           placeholder="Type Student Full Name" required>
+
+    <label>Parent Signature</label>
+    <input type="text" name="parent-signature"
+           placeholder="Type Parent Full Name" required>
+
+    <button type="submit">
+        Submit Registration
+    </button>
+
+    <p id="status" aria-live="polite"></p>
+
+</form>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>BURE NICHOLAS BOHM SCHOOL</p>
+    <p>Student Registration Office</p>
+</section>
+
+<footer>
+    <p>© 2026 Bure Nicholas Bohm School. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
